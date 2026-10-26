@@ -5,3 +5,35 @@
 # compiled output
 dist
 docs/api/
+.Claude
+
+# Агентская разработка (Claude Code) — локально, в репозиторий не идёт
+/.claude/
+/CLAUDE.md
+/CLAUDE.local.md
+/CLAUDE.local.md.example
+/.mcp.json
+/.mcp.json.example
+/.tasks/
+/v8project.yaml
+**/.mem/
+
+# Каталог шаблона подключён связями (junction) на мастерскую — в git проекта они не идут.
+# Это переопределяет комментарий про .claude выше, если он есть: git связь не распознаёт,
+# и при отслеживании этих файлов git checkout в проекте перезапишет файлы мастерской.
+/.claude/agents/
+/.claude/commands/
+/.claude/rules/
+/.claude/skills/
+
+# Подключение к базе 1С для пакетных скриптов — личное, с паролем
+/tools/.1c-devbase.ps1
+/v8project.local.yaml
+# Машинное состояние раннера unica
+/.build/
+# Служебные файлы выгрузки конфигуратора и проверки unica
+/src/ConfigDumpInfo.xml
+/src/DumpFilesIndex.txt
+/src/.build/
+# code-index: индекс SQLite и настройки исключений — локально
+/src/.code-index/
